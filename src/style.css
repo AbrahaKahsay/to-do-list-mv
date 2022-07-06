@@ -16,22 +16,29 @@
 } */
 
 body {
-  background-color: bisque;
   border: 1px solid black;
   max-width: 400px;
   margin: auto;
   margin-top: 10%;
-  padding: 3px;
+  box-shadow: 2px 2px 8px black;
+  background-color: rgba(177, 173, 173, 0.199);
+}
+
+h1 {
+  font-size: medium;
+  font-weight: 400;
 }
 
 .list-container {
   display: flex;
   flex-direction: column;
   padding: 25px;
+  background-color: white;
 }
 
 #form {
   border: 2px solid rgb(182, 176, 176);
+  margin-bottom: 10px;
 }
 
 input {
@@ -39,5 +46,5 @@ input {
   border-right-style: hidden;
   border-left-style: hidden;
   border-bottom-style: hidden;
-  background-color: #eee;
+  width: 80%;
 }
