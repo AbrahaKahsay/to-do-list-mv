@@ -25,17 +25,17 @@ const tasks = [
 ];
 
 // console.log(tasks)
-
-for (let i = 0; i < tasks.length; i = i+1) {
+for (let i = 0; i < tasks.length; i += 1) {
     // creating and appending checkbox
     const checkBox = document.createElement('input');
     checkBox.setAttribute('type', 'checkbox');
-    checBbox.setAttribute('id', 'myCheck');
+    checkBox.setAttribute('id', 'checkbox');
     form.appendChild(checkBox);
     
     // creatind and appending label
     const myLabel = document.createElement('label');
     myLabel.setAttribute('for', 'checkbox');
+    myLabel.setAttribute('id', 'lab')
     myLabel.innerHTML = tasks[i].description;
     form.appendChild(myLabel);
 
@@ -46,5 +46,6 @@ for (let i = 0; i < tasks.length; i = i+1) {
     // creating and appending line
     const line = document.createElement('hr');
     form.appendChild(line); 
-  }
+    }
+
   

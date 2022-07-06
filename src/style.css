@@ -26,15 +26,26 @@ hr {
   background-color: white;
 }
 
-#form {
-  border: 2px solid rgb(182, 176, 176);
-  margin-bottom: 10px;
-}
-
 input {
   border-top-style: hidden;
   border-right-style: hidden;
   border-left-style: hidden;
   border-bottom-style: hidden;
-  width: 80%;
+}
+
+#add-list {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  font-size: small;
+  /* border-bottom: 2px solid black; */
+}
+
+#lab {
+  font-size: medium;
+  font-weight: 200;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.clearBtn {
+  padding: 10px;
 }
