@@ -1,75 +1,84 @@
+
 ![](https://img.shields.io/badge/Microverse-blueviolet)
+# To Do list : list structure
+In this project, I will build a simple HTML list of To Do tasks. It is a simple web page that will be built using webpack and served by a webpack dev server.
 
-# Project Name
+It has the objectives of using:
 
-> One paragraph statement about the project.
+- Use webpack to bundle JavaScript.
+- Learn how to use proper ES6 syntax.
+- Use ES6 modules to write modular JavaScript.
 
-![screenshot](./app_screenshot.png)
+## Screenshot
+![awesome-book-es6](https://user-images.githubusercontent.com/75738563/177220910-cfccbfd8-a7fc-4b84-9434-431327f99f15.png)
 
-Additional description about the project and its features.
+## Built with
 
-## Built With
-
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo
-
-[Live Demo Link](https://livedemo.com)
-
+- Major languages: HTML, CSS, JavaScript
+- Technologies used: VS Code, Github, Linters, Firefox web-browser
+- webpack
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+Clone the repository and setup the linter
 
+## Prerequisites
 
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
+- npm ( Node Package Manager )
+- git and Github Account
 
 ### Setup
 
+To get a local copy up and running follow these simple example steps.
+
+- Open terminal
+- Change the directory you want put the repo
+- Finally run git clone https://github.com/AbrahaKahsay/to-do-list-mv.git follwed by cd repo-name/
+
 ### Install
 
-### Usage
+- **Webhint** linter
+
+  `npm install --save-dev hint@6.x`
+
+- **Stylelint** linter
+
+  `npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x`
+
+- **ESLint** linter
+
+  `npm install --save-dev eslint@7.x eslint-config-airbnb-base@14.x eslint-plugin-import@2.x babel-eslint@10.x`
+
+ - **luxon** libray
+
+    `npm install --save luxon`
+
 
 ### Run tests
 
-### Deployment
-
-
+- **Webhint** linter -`npx hint .` on the root of your directory of your project.
+- **Stylelint** linter
+  - `npx stylelint "**/*.{css,scss}"` on the root of your directory of your project.
+- **ESLint** linter
+  - `npx eslint .` on the root of your directory of your project.
 
 ## Authors
 
-👤 **Author1**
+👤 **Abraha Kahsay**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@AbrahaKahsay](https://github.com/AbrahaKahsay)
+- Twitter: [@Alamsbut](https://twitter.com/Alamsbut)
+- LinkedIn: [abraha-kahsay](www.linkedin.com/in/abraha-kahsay-492771135/)
 
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](../../issues/).
-
-## Show your support
-
-Give a ⭐️ if you like this project!
+## Contributers
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- To Microverse morning session team,reviewers and standup team memebers.
+
+## Live Demo
+
+**[FOLLOW THIS LINK TO SEE THE LIVE DEMO](https://abrahakahsay.github.io/to-do-list-mv/)**
 
 ## 📝 License
 
