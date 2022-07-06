@@ -1,6 +1,5 @@
 // import _ from 'lodash';
 import './style.css';
-// import Icon from './icon.png';
 
 const form = document.getElementById('form');
 const tasks = [
