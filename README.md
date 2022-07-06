@@ -10,7 +10,7 @@ It has the objectives of using:
 - Use ES6 modules to write modular JavaScript.
 
 ## Screenshot
-![awesome-book-es6](https://user-images.githubusercontent.com/75738563/177220910-cfccbfd8-a7fc-4b84-9434-431327f99f15.png)
+![image](https://user-images.githubusercontent.com/75738563/177642440-01407cb0-d9d8-44b0-846d-ae96efe160f7.png)
 
 ## Built with
 
