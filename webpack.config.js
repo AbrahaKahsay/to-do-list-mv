@@ -3,18 +3,18 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   ci: {
-		collect: {
-			numberOfRuns: 3,
-			startServerCommand: 'yarn run start',
-			url: ['http://localhost'],
-		},
-		assert: {
-			preset: 'lighthouse:recommended',
-		},
-		upload: {
-			target: 'temporary-public-storage',
-		},
-	},
+    collect: {
+      numberOfRuns: 3,
+      startServerCommand: 'yarn run start',
+      url: ['http://localhost'],
+    },
+    assert: {
+      preset: 'lighthouse:recommended',
+    },
+    upload: {
+      target: 'temporary-public-storage',
+    },
+  },
   entry: './src/index.js',
   devServer: {
     static: './dist',
