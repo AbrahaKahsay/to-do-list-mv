@@ -17,13 +17,12 @@ const tasks = [
   },
   {
     description: 'break dance',
-    completed: false,
-    index: 0,
+    completed: true,
+    index: 2,
 
   },
 ];
 
-// console.log(tasks)
 for (let i = 0; i < tasks.length; i += 1) {
   // creating and appending checkbox
   const checkBox = document.createElement('input');
