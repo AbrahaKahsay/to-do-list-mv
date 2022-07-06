@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: "MyFont";
 
   src: url("./my-font.woff2") format("woff2"),
@@ -13,8 +13,14 @@
   color: green;
   font-family: "MyFont";
   background: url("./icon.png");
-}
+} */
 
 body {
   background-color: bisque;
+  border: 1px solid black;
+  max-width: 400px;
+  margin: auto;
+  margin-top: 10%;
+  padding: 3px;
 }
+
