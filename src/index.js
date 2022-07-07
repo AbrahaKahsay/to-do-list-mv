@@ -6,9 +6,26 @@ import { Tasks, addList, display } from './modules/methods.js';
 // creating a todo list collection by instantiating Tasks class
 const collection = new Tasks();
 
+// check local storage and update
 if(localStorage.Tasks){
   collection.array = JSON.parse(localStorage.Tasks);
 }
+
+// Add event to add list
+addList.addEventListener('keypress', (event)=>{
+  if(event.key === 'Enter') {
+
+    const newTasks = new Todos();
+    newTasks.description = addList.value;
+    newTasks.complete = false;
+    newTasks.index = `${collection.array.length + 1}`;
+    collection.array.push(newTasks);
+    newTasks.value = ' ';
+    const stringData = JSON.stringify(storage.array);
+    localStorage.setItem('Tasks', stringData);
+    window.location.reload();
+  }
+});
 
 for (let i = 0; i < tasks.length; i += 1) {
   // creating and appending checkbox
