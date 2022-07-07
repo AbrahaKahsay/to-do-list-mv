@@ -54,3 +54,18 @@ const updateIndex = () => {
   localStorage.setItem('Tasks', stringData);
 };
 updateIndex();
+
+// Edit and update tasks in the localStorage;
+const updateTask = () => {
+  const list = document.getElementsByClassName('list');
+  for (let i = 0; i < list.length; i += 1) {
+    list[i].addEventListener('change', () => {
+      collection.array[i].description = list[i].value;
+      const stringData = JSON.stringify(storage.array);
+      localStorage.setItem('tasks', stringData);
+      window.location.reload();
+    });
+  }
+};
+updateTask();
+export default collection;
