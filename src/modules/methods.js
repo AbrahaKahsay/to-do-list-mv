@@ -22,14 +22,21 @@ const display = ()=>{
 
             const todo = document.createElement('div');
             todo.id = `item${i}`;
-            
+
             // create and append checkbox
             const newCheck = document.createElement('input');
             newCheck.setAttribute('type', 'checkbox');
             newCheck.setAttribute('id', `${i}`);
             todo.appendChild(newCheck);
 
+            // create and append label
             const newLabel = document.createElement('input');
+            newLabel.setAttribute('type', 'text');
+            newLabel.className = 'list';
+            newLabel.id = `list${i}`;
+            newLabel.value = JSON.parse(localStorage.Tasks)[i].description;
+            todo.appendChild(newLabel);
+
             const lineBreak = document.createElement('br');
             const line = document.createElement('hr');
             const dotsIcon = new Image();
