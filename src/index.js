@@ -27,25 +27,20 @@ addList.addEventListener('keypress', (event)=>{
   }
 });
 
-for (let i = 0; i < tasks.length; i += 1) {
-  // creating and appending checkbox
-  const checkBox = document.createElement('input');
-  checkBox.setAttribute('type', 'checkbox');
-  checkBox.setAttribute('id', 'checkbox');
-  form.appendChild(checkBox);
+// display the todos added
+display();
 
-  // creatind and appending label
-  const myLabel = document.createElement('label');
-  myLabel.setAttribute('for', 'checkbox');
-  myLabel.setAttribute('id', 'lab');
-  myLabel.innerHTML = tasks[i].description;
-  form.appendChild(myLabel);
-
-  // creating and appending line break
-  const lineBreak = document.createElement('br');
-  form.appendChild(lineBreak);
-
-  // creating and appending line
-  const line = document.createElement('hr');
-  form.appendChild(line);
+// remove item from collection
+for (let i = 0; i < collection.array.length; i += 1) {
+  const remove = document.getElementById(`remove${i}`);
+  const descriptionName = collection.array[i].description;
+  const deleteItem = document.getElementById(`item${i}`);
+  // Add event listner
+  remove.addEventListener('click', () => {
+    const filtered = collection.array.filter((Tasks) => Tasks.description !== descriptionName);
+    const stringData = JSON.stringify(filtered);
+    localStorage.setItem('Tasks', stringData);
+    deleteItem.remove();
+    window.location.reload();
+  });
 }
