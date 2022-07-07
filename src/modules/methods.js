@@ -37,8 +37,14 @@ const display = ()=>{
             newLabel.value = JSON.parse(localStorage.Tasks)[i].description;
             todo.appendChild(newLabel);
 
+            // create and line breal 
             const lineBreak = document.createElement('br');
+            todo.appendChild(lineBreak);
+
+            // create and append line
             const line = document.createElement('hr');
+            todo.appendChild(line);
+
             const dotsIcon = new Image();
             const trashIcon = new Image();
             const editIcon = new Image();
