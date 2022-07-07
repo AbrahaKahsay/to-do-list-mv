@@ -1,0 +1,50 @@
+body {
+  border: 1px solid black;
+  max-width: 400px;
+  margin: auto;
+  margin-top: 10%;
+  box-shadow: 2px 2px 8px black;
+  background-color: rgba(177, 173, 173, 0.199);
+}
+
+h1 {
+  font-size: medium;
+  font-weight: 400;
+  padding-left: 20px;
+}
+
+hr {
+  width: 100%;
+  font-weight: 100;
+  color: rgb(228, 222, 222);
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  background-color: white;
+}
+
+input {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
+}
+
+#add-list {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  font-size: small;
+}
+
+#lab {
+  font-size: medium;
+  font-weight: 200;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.clearBtn {
+  padding: 10px;
+}
