@@ -1,7 +1,7 @@
 // import _ from 'lodash';
 import './style.css';
-import Todos from './modules/classes.js';
-import { Tasks, addList, display } from './modules/methods.js';
+import Todos from './classes.js';
+import { Tasks, addList, display } from './methods.js';
 
 // creating a todo list collection by instantiating Tasks class
 const collection = new Tasks();
@@ -21,7 +21,7 @@ addList.addEventListener('keypress', (event)=>{
     newTasks.index = `${collection.array.length + 1}`;
     collection.array.push(newTasks);
     newTasks.value = ' ';
-    const stringData = JSON.stringify(storage.array);
+    const stringData = JSON.stringify(collection.array);
     localStorage.setItem('Tasks', stringData);
     window.location.reload();
   }

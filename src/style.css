@@ -39,10 +39,40 @@ input {
   font-size: small;
 }
 
-#lab {
+#new-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.list {
   font-size: medium;
   font-weight: 200;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  padding-left: 95%;
+  display: none;
+}
+
+.trashIcon {
+  width: 20px;
+  height: 20px;
+  padding-left: 95%;
+}
+
+/* #remove {
+  display: flex;
+} */
+
+.iconEdit {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  padding-left: 95%;
+  display: none;
 }
 
 .clearBtn {

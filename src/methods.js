@@ -1,6 +1,6 @@
-import Dots from './modules/dots.png';
-import Trash from './modules/trash-bin.png';
-import Edit from './modules/edit.png';
+import Dots from './dots.png';
+import Trash from './trash-bin.png';
+import Edit from './edit.png';
 
 // handles DoM elements
 const addList = document.getElementById('add-list');
@@ -45,22 +45,22 @@ const display = ()=>{
             const line = document.createElement('hr');
             todo.appendChild(line);
 
-            const dotsIcon = new Image();
-            dotsIcon.className = 'icon';
-            dotsIcon.id = `icon${i}`;
-            dotsIcon.src = Dots;        // check .src later
-            div.appendChild(dotsIcon);
+            const editIcon = new Image();
+            editIcon.className = 'iconEdit';
+            editIcon.src = Edit;
+            div.appendChild(editIcon);
 
             const trashIcon = new Image();
             trashIcon.className = 'trashIcon';
             trashIcon.id = `remove${i}`;
             trashIcon.src = Trash;
             div.appendChild(trashIcon);
-            
-            const editIcon = new Image();
-            editIcon.className = 'iconEdit';
-            editIcon.src = Edit;
-            div.appendChild(editIcon);
+
+            const dotsIcon = new Image();
+            dotsIcon.className = 'icon';
+            dotsIcon.id = `icon${i}`;
+            dotsIcon.src = Dots;        // check .src later
+            div.appendChild(dotsIcon);
             
             newList.appendChild(todo);
             newList.appendChild(div);
