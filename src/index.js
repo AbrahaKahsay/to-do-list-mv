@@ -44,3 +44,13 @@ for (let i = 0; i < collection.array.length; i += 1) {
     window.location.reload();
   });
 }
+
+// update index
+const updateIndex = () => {
+  collection.array.forEach((todos, index) => {
+    todos.index = index + 1;
+  });
+  const stringData = JSON.stringify(collection.array);
+  localStorage.setItem('Tasks', stringData);
+};
+updateIndex();
