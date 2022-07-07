@@ -46,9 +46,24 @@ const display = ()=>{
             todo.appendChild(line);
 
             const dotsIcon = new Image();
+            dotsIcon.className = 'icon';
+            dotsIcon.id = `icon${i}`;
+            dotsIcon.src = Dots;        // check .src later
+            div.appendChild(dotsIcon);
+
             const trashIcon = new Image();
-            const editIcon = new Image();
+            trashIcon.className = 'trashIcon';
+            trashIcon.id = `rmv${i}`;
+            trashIcon.src = Bin;
+            div.appendChild(trashIcon);
             
+            const editIcon = new Image();
+            editIcon.className = 'iconEdit';
+            editIcon.src = Edit;
+            div.appendChild(editIcon);
+            
+            newList.appendChild(todo);
+            newList.appendChild(div);
         }
     }
 }
