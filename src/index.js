@@ -1,27 +1,14 @@
 // import _ from 'lodash';
 import './style.css';
+import Todos from './modules/classes.js';
+import { Tasks, addList, display } from './modules/methods.js';
 
-const form = document.getElementById('form');
-const tasks = [
-  {
-    description: 'attending mornning session',
-    completed: true,
-    index: 0,
+// creating a todo list collection by instantiating Tasks class
+const collection = new Tasks();
 
-  },
-  {
-    description: 'coding',
-    completed: true,
-    index: 1,
-
-  },
-  {
-    description: 'break dance',
-    completed: true,
-    index: 2,
-
-  },
-];
+if(localStorage.Tasks){
+  collection.array = JSON.parse(localStorage.Tasks);
+}
 
 for (let i = 0; i < tasks.length; i += 1) {
   // creating and appending checkbox
