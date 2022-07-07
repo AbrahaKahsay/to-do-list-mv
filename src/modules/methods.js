@@ -6,3 +6,10 @@ import Edit from './modules/edit.png';
 const addList = document.getElementById('add-list');
 const newList = document.getElementById('new-list');
 
+// Create a class for tasks
+class Tasks {
+    constructor(){
+        this.array = [];
+    }
+}
+
