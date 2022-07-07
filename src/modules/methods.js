@@ -53,7 +53,7 @@ const display = ()=>{
 
             const trashIcon = new Image();
             trashIcon.className = 'trashIcon';
-            trashIcon.id = `rmv${i}`;
+            trashIcon.id = `remove${i}`;
             trashIcon.src = Trash;
             div.appendChild(trashIcon);
             
