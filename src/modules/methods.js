@@ -66,4 +66,5 @@ const display = ()=>{
             newList.appendChild(div);
         }
     }
-}
+};
+export { Tasks, display, addList};
