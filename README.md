@@ -1,7 +1,8 @@
-
 ![](https://img.shields.io/badge/Microverse-blueviolet)
-# To Do list : list structure
-In this project, I will build a simple HTML list of To Do tasks. It is a simple web page that will be built using webpack and served by a webpack dev server.
+
+# To Do list : add and remove
+
+In this project, I will implement the CRUD (create, update, delete) methods. All the elements of the user interface will be fully functional and the application will be completed.
 
 It has the objectives of using:
 
@@ -10,6 +11,7 @@ It has the objectives of using:
 - Use ES6 modules to write modular JavaScript.
 
 ## Screenshot
+
 ![image](https://user-images.githubusercontent.com/75738563/177642440-01407cb0-d9d8-44b0-846d-ae96efe160f7.png)
 
 ## Built with
@@ -49,10 +51,9 @@ To get a local copy up and running follow these simple example steps.
 
   `npm install --save-dev eslint@7.x eslint-config-airbnb-base@14.x eslint-plugin-import@2.x babel-eslint@10.x`
 
- - **luxon** libray
+- **luxon** libray
 
-    `npm install --save luxon`
-
+  `npm install --save luxon`
 
 ### Run tests
 
