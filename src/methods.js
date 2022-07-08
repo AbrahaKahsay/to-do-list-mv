@@ -37,7 +37,7 @@ const display = ()=>{
             newLabel.value = JSON.parse(localStorage.Tasks)[i].description;
             todo.appendChild(newLabel);
 
-            // create and line breal 
+            // create and line break
             const lineBreak = document.createElement('br');
             todo.appendChild(lineBreak);
 
@@ -47,6 +47,7 @@ const display = ()=>{
 
             const editIcon = new Image();
             editIcon.className = 'iconEdit';
+            editIcon.id = `edit${i}`;
             editIcon.src = Edit;
             div.appendChild(editIcon);
 
@@ -59,11 +60,13 @@ const display = ()=>{
             const dotsIcon = new Image();
             dotsIcon.className = 'icon';
             dotsIcon.id = `icon${i}`;
-            dotsIcon.src = Dots;        // check .src later
+            dotsIcon.src = Dots;       
             div.appendChild(dotsIcon);
-            
+            todo.appendChild(div);
+
             newList.appendChild(todo);
             newList.appendChild(div);
+            
         }
     }
 };
