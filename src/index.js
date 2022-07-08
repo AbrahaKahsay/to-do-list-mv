@@ -86,6 +86,16 @@ for (let i=0; i<collection.array.length; i += 1){
       const lists = document.getElementById('list${i}');
       lists.style.textDecoration = 'none';
     }
-  })
+  });
 }
+
+// Add functionality to clear button
+const clear = document.getElementById('clearBtn');
+clear.addEventListener('click', () => {
+  const filtered = collection.array.filter((items)=> items.completed === false);
+  for (let i=0; i<collection.array.length; i += 1){
+  const markedItem = document.getElementById('item${i}');
+  markedItem.remove();
+  }
+})
 export default collection;
