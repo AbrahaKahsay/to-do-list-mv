@@ -109,10 +109,10 @@ clear.addEventListener('click', () => {
   updateTask();
   updateIndex();
 });
-const refresh = document.getElementsByTagName('h1');
+const refresh = document.getElementsById('title');
 const refreshIcon = new Image();
 refreshIcon.src = Refresh;
-refreshIcon.className = 'rotate';
+refreshIcon.className = 'refresh';
 refresh.appendChild(refreshIcon);
 
 const form = document.getElementById('form');
