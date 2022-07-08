@@ -1,5 +1,7 @@
 // import _ from 'lodash';
 import './style.css';
+import Refresh from './refresh.png';
+import Enter from './enter.png';
 import Todos from './classes.js';
 import { Tasks, addList, display } from './methods.js';
 
@@ -103,8 +105,19 @@ clear.addEventListener('click', () => {
 
   const remove = document.querySelector('.trashIcon');
   remove.style.display = 'none';
-  
+
   updateTask();
   updateIndex();
 });
-export default collection;
+const refresh = document.getElementsByTagName('h1');
+const refreshIcon = new Image();
+refreshIcon.src = Refresh;
+refreshIcon.className = 'rotate';
+refresh.appendChild(refreshIcon);
+
+const form = document.getElementById('form');
+const enterIcon = new Image();
+enterIcon.src = Enter;
+enterIcon.className = 'enter';
+form.appendChild(enterIcon);
+
