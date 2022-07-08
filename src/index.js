@@ -61,10 +61,24 @@ const updateTask = () => {
     list[i].addEventListener('change', () => {
       collection.array[i].description = list[i].value;
       const stringData = JSON.stringify(collection.array);
-      localStorage.setItem('tasks', stringData);
+      localStorage.setItem('Tasks', stringData);
       window.location.reload();
     });
   }
 };
 updateTask();
+
+for (let i=0; i<collection.array.length; i += 1){
+  const checkbox = document.getElementById('box${i}');
+  checkbox.addEventListener('change', ()=>{
+    if(collection.array[i].complete === false){
+      collection.array[i].complete = true;
+      localStorage.setItem('Tasks', JSON.stringify(collection.array);
+
+      const list = document.getElementById('list${i}');
+      list.style.textDecoration = 'line-throgh';
+      
+    }
+  })
+}
 export default collection;
