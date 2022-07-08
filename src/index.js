@@ -68,16 +68,23 @@ const updateTask = () => {
 };
 updateTask();
 
+// Add functionality to checkbox
 for (let i=0; i<collection.array.length; i += 1){
   const checkbox = document.getElementById('box${i}');
   checkbox.addEventListener('change', ()=>{
     if(collection.array[i].complete === false){
       collection.array[i].complete = true;
-      localStorage.setItem('Tasks', JSON.stringify(collection.array);
+      localStorage.setItem('Tasks', JSON.stringify(collection.array));
 
       const list = document.getElementById('list${i}');
       list.style.textDecoration = 'line-throgh';
+    }
+    else if (collection.array[i].complete === true){
+      collection.array[i].completed = false;
+      localStorage.setItem('Tasks', JSON.stringify(collection.array));
       
+      const lists = document.getElementById('list${i}');
+      lists.style.textDecoration = 'none';
     }
   })
 }
