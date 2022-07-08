@@ -92,10 +92,19 @@ for (let i=0; i<collection.array.length; i += 1){
 // Add functionality to clear button
 const clear = document.getElementById('clearBtn');
 clear.addEventListener('click', () => {
+  // filtering out incomplete tasks
   const filtered = collection.array.filter((items)=> items.completed === false);
   for (let i=0; i<collection.array.length; i += 1){
   const markedItem = document.getElementById('item${i}');
   markedItem.remove();
   }
-})
+  // store filtered items into local storage
+  localStorage.setItem('Tasks', JSON.stringify(filtered));
+
+  const remove = document.querySelector('.trashIcon');
+  remove.style.display = 'none';
+  
+  updateTask();
+  updateIndex();
+});
 export default collection;
