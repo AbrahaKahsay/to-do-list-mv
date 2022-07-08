@@ -64,7 +64,6 @@ input {
 }
 
 .iconEdit {
-  display: flex;
   width: 20px;
   height: 20px;
   padding-left: 95%;
