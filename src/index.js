@@ -7,14 +7,13 @@ import { Tasks, addList, display } from './methods.js';
 const collection = new Tasks();
 
 // check local storage and update
-if(localStorage.Tasks){
+if (localStorage.Tasks) {
   collection.array = JSON.parse(localStorage.Tasks);
 }
 
 // Add event to add list
-addList.addEventListener('keypress', (event)=>{
-  if(event.key === 'Enter') {
-
+addList.addEventListener('keypress', (event) => {
+  if (event.key === 'Enter') {
     const newTasks = new Todos();
     newTasks.description = addList.value;
     newTasks.complete = false;
@@ -61,7 +60,7 @@ const updateTask = () => {
   for (let i = 0; i < list.length; i += 1) {
     list[i].addEventListener('change', () => {
       collection.array[i].description = list[i].value;
-      const stringData = JSON.stringify(storage.array);
+      const stringData = JSON.stringify(collection.array);
       localStorage.setItem('tasks', stringData);
       window.location.reload();
     });
