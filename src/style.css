@@ -44,7 +44,10 @@ input {
   flex-direction: column;
 }
 
-.list {
+#list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   font-size: medium;
   font-weight: 200;
   font-family: Arial, Helvetica, sans-serif;
@@ -53,14 +56,12 @@ input {
 .icon {
   width: 20px;
   height: 20px;
-  padding-left: 95%;
   display: none;
 }
 
 .trashIcon {
   width: 20px;
   height: 20px;
-  padding-left: 95%;
 }
 
 .iconEdit {
@@ -70,6 +71,26 @@ input {
   display: none;
 }
 
-.clearBtn {
+ .clearBtn {
   padding: 10px;
+} 
+
+.myTasks {
+  display: flex;
+  align-items: center;
+ justify-content: space-between;
+ padding: 4px 0;
+ border-bottom: solid gray 1px;
+}
+
+.enter,
+.refresh {
+  width: 20px;
+  height: 20px;
+}
+
+#title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

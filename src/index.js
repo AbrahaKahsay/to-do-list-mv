@@ -72,20 +72,20 @@ updateTask();
 
 // Add functionality to checkbox
 for (let i=0; i<collection.array.length; i += 1){
-  const checkbox = document.getElementById('box${i}');
-  checkbox.addEventListener('change', ()=>{
+  const checkbox = document.getElementById(`box${i}`);
+  checkbox.addEventListener('change', ()=> {
     if(collection.array[i].complete === false){
       collection.array[i].complete = true;
       localStorage.setItem('Tasks', JSON.stringify(collection.array));
 
-      const list = document.getElementById('list${i}');
-      list.style.textDecoration = 'line-throgh';
+      const list = document.getElementById(`list${i}`);
+      list.style.textDecoration = 'line-through';
     }
     else if (collection.array[i].complete === true){
-      collection.array[i].completed = false;
+      collection.array[i].complete = false;
       localStorage.setItem('Tasks', JSON.stringify(collection.array));
       
-      const lists = document.getElementById('list${i}');
+      const lists = document.getElementById(`list${i}`);
       lists.style.textDecoration = 'none';
     }
   });
@@ -95,13 +95,14 @@ for (let i=0; i<collection.array.length; i += 1){
 const clear = document.getElementById('clearBtn');
 clear.addEventListener('click', () => {
   // filtering out incomplete tasks
-  const filtered = collection.array.filter((items)=> items.completed === false);
+  const filtered = collection.array.filter((items)=> items.complete === false);
+  const stringData = JSON.stringify(filtered)
   for (let i=0; i<collection.array.length; i += 1){
-  const markedItem = document.getElementById('item${i}');
+  const markedItem = document.getElementById(`item${i}`);
   markedItem.remove();
   }
   // store filtered items into local storage
-  localStorage.setItem('Tasks', JSON.stringify(filtered));
+  localStorage.setItem('Tasks', stringData);
 
   const remove = document.querySelector('.trashIcon');
   remove.style.display = 'none';
@@ -109,15 +110,27 @@ clear.addEventListener('click', () => {
   updateTask();
   updateIndex();
 });
-const refresh = document.getElementsById('title');
-const refreshIcon = new Image();
-refreshIcon.src = Refresh;
-refreshIcon.className = 'refresh';
-refresh.appendChild(refreshIcon);
+const refresher = document.getElementById('title');
+const refresh = new Image();
+refresh.src = Refresh;
+refresh.id = 'refresh'
+refresh.className = 'refresh';
+refresher.appendChild(refresh);
 
-const form = document.getElementById('form');
-const enterIcon = new Image();
-enterIcon.src = Enter;
-enterIcon.className = 'enter';
-form.appendChild(enterIcon);
+const reloadPage = document.querySelector("#refresh");
+// Reload everything:
+function reload() {
+  reload = location.reload();
+}
+// Event listeners for reload
+reloadPage.addEventListener("click", reload, false);
+
+// Add eneter key
+const form = document.getElementById('list');
+const enter = new Image();
+enter.src = Enter;
+enter.className = 'enter';
+form.appendChild(enter);
+
+
 
