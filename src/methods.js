@@ -21,7 +21,7 @@ const display = () => {
       const div = document.createElement('div');
 
       const todo = document.createElement('div');
-      todo.className = 'myTasks'
+      todo.className = 'myTasks';
       todo.id = `item${i}`;
 
       // create and append checkbox

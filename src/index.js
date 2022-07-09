@@ -71,20 +71,19 @@ const updateTask = () => {
 updateTask();
 
 // Add functionality to checkbox
-for (let i=0; i<collection.array.length; i += 1){
+for (let i = 0; i < collection.array.length; i += 1) {
   const checkbox = document.getElementById(`box${i}`);
-  checkbox.addEventListener('change', ()=> {
-    if(collection.array[i].complete === false){
+  checkbox.addEventListener('change', () => {
+    if (collection.array[i].complete === false) {
       collection.array[i].complete = true;
       localStorage.setItem('Tasks', JSON.stringify(collection.array));
 
       const list = document.getElementById(`list${i}`);
       list.style.textDecoration = 'line-through';
-    }
-    else if (collection.array[i].complete === true){
+    } else if (collection.array[i].complete === true) {
       collection.array[i].complete = false;
       localStorage.setItem('Tasks', JSON.stringify(collection.array));
-      
+
       const lists = document.getElementById(`list${i}`);
       lists.style.textDecoration = 'none';
     }
@@ -95,11 +94,11 @@ for (let i=0; i<collection.array.length; i += 1){
 const clear = document.getElementById('clearBtn');
 clear.addEventListener('click', () => {
   // filtering out incomplete tasks
-  const filtered = collection.array.filter((items)=> items.complete === false);
-  const stringData = JSON.stringify(filtered)
-  for (let i=0; i<collection.array.length; i += 1){
-  const markedItem = document.getElementById(`item${i}`);
-  markedItem.remove();
+  const filtered = collection.array.filter((items) => items.complete === false);
+  const stringData = JSON.stringify(filtered);
+  for (let i = 0; i < collection.array.length; i += 1) {
+    const markedItem = document.getElementById(`item${i}`);
+    markedItem.remove();
   }
   // store filtered items into local storage
   localStorage.setItem('Tasks', stringData);
@@ -116,17 +115,17 @@ clear.addEventListener('click', () => {
 const refresher = document.getElementById('title');
 const refresh = new Image();
 refresh.src = Refresh;
-refresh.id = 'refresh'
+refresh.id = 'refresh';
 refresh.className = 'refresh';
 refresher.appendChild(refresh);
 
-const reloadPage = document.querySelector("#refresh");
+const reloadPage = document.querySelector('#refresh');
 // Reload everything:
 function reload() {
-  reload = location.reload();
+  window.location.reload();
 }
 // Event listeners for reload
-reloadPage.addEventListener("click", reload, false);
+reloadPage.addEventListener('click', reload, false);
 
 // Add eneter key
 const form = document.getElementById('list');
