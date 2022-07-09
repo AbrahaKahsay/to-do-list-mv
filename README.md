@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# To Do list : add and remove
+# To Do list : interactive
 
-In this project, I will implement the CRUD (create, update, delete) methods. All the elements of the user interface will be fully functional and the application will be completed.
+In this project, I will add some functionality to my application to make it interactive. The user will also be able to mark task completion by selecting the corresponding checkbox (or undo it by unchecking the checkbox). The updated tasks list will be stored in local storage.
 
 It has the objectives of using:
 
@@ -12,7 +12,8 @@ It has the objectives of using:
 
 ## Screenshot
 
-![image](https://user-images.githubusercontent.com/75738563/177642440-01407cb0-d9d8-44b0-846d-ae96efe160f7.png)
+![image](https://user-images.githubusercontent.com/75738563/178102465-becf1302-6843-4bc8-b1c3-38abea3f7468.png)
+
 
 ## Built with
 
