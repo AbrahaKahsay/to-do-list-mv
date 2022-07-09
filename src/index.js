@@ -21,7 +21,7 @@ addList.addEventListener('keypress', (event) => {
     newTasks.complete = false;
     newTasks.index = `${collection.array.length + 1}`;
     collection.array.push(newTasks);
-    newTasks.value = ' ';
+    newTasks.value = '';
     const stringData = JSON.stringify(collection.array);
     localStorage.setItem('Tasks', stringData);
     window.location.reload();
@@ -110,6 +110,9 @@ clear.addEventListener('click', () => {
   updateTask();
   updateIndex();
 });
+
+// Add the refresh button
+// handle and add to DOM
 const refresher = document.getElementById('title');
 const refresh = new Image();
 refresh.src = Refresh;
@@ -130,7 +133,5 @@ const form = document.getElementById('list');
 const enter = new Image();
 enter.src = Enter;
 enter.className = 'enter';
+enter.id = 'enter';
 form.appendChild(enter);
-
-
-
