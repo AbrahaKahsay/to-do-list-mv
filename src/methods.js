@@ -21,12 +21,19 @@ const display = () => {
       const div = document.createElement('div');
 
       const todo = document.createElement('div');
+      todo.className = 'myTasks';
       todo.id = `item${i}`;
 
       // create and append checkbox
       const newCheck = document.createElement('input');
       newCheck.setAttribute('type', 'checkbox');
-      newCheck.setAttribute('id', `${i}`);
+      newCheck.setAttribute('id', `box${i}`);
+
+      const checkStatus = JSON.parse(localStorage.Tasks)[i].complete;
+      if (checkStatus) {
+        newCheck.checked = true;
+      }
+
       todo.appendChild(newCheck);
 
       // create and append label
@@ -34,6 +41,9 @@ const display = () => {
       newLabel.setAttribute('type', 'text');
       newLabel.className = 'list';
       newLabel.id = `list${i}`;
+      if (checkStatus) {
+        newLabel.style.textDecoration = 'line-through';
+      }
       newLabel.value = JSON.parse(localStorage.Tasks)[i].description;
       todo.appendChild(newLabel);
 
@@ -41,9 +51,9 @@ const display = () => {
       const lineBreak = document.createElement('br');
       todo.appendChild(lineBreak);
 
-      // create and append line
-      const line = document.createElement('hr');
-      todo.appendChild(line);
+      // // create and append line
+      // const line = document.createElement('hr');
+      // todo.appendChild(line);
 
       const editIcon = new Image();
       editIcon.className = 'iconEdit';
@@ -62,10 +72,9 @@ const display = () => {
       dotsIcon.id = `icon${i}`;
       dotsIcon.src = Dots;
       div.appendChild(dotsIcon);
-      todo.appendChild(div);
 
+      todo.appendChild(div);
       newList.appendChild(todo);
-      newList.appendChild(div);
     }
   }
 };
