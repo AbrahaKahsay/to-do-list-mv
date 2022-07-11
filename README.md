@@ -80,7 +80,7 @@ To get a local copy up and running follow these simple example steps.
 
 ## Live Demo
 
-**[FOLLOW THIS LINK TO SEE THE LIVE DEMO](https://abrahakahsay.github.io/to-do-list-mv/)**
+**[FOLLOW THIS LINK TO SEE THE LIVE DEMO](https://abrahakahsay.github.io/to-do-list-mv/dist/)**
 
 ## 📝 License
 
