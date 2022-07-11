@@ -3,30 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
     <title>To Do list</title>
   <script defer src="runtime.js"></script><script defer src="main.js"></script></head>
   <body>
-    <section class="list-container" id="list">
+    <section class="list-container" id="all-list">
       <div>
-        <h1>Today's To Do</h1>
-        <i class="fa-solid fa-rotate"></i>
-        <form id="form">
+        <div id="title">
+          <h1>Today's To Do</h1>
+        </div>
+        <form id="list">
           <input
             type="text"
             name="todo-list"
             id="add-list"
             placeholder="Add to your list ..."
-          /><i class="fa-solid fa-enter"></i>
-          <br />
+          />
         </form>
         <hr />
       </div>
       <div id="new-list"></div>
-      <button class="clearBtn">clear all completed</button>
+      <button class="clearBtn" id="clearBtn">clear all completed</button>
     </section>
   </body>
 </html>
