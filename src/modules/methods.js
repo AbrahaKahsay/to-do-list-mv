@@ -1,4 +1,4 @@
-import Trash from './trash-bin.png';
+import Trash from '.././trash-bin.png';
 // handles DoM elements
 const addList = document.getElementById('add-list');
 const newList = document.getElementById('new-list');
