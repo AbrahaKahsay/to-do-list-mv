@@ -15,6 +15,7 @@ class Tasks {
 
 // create display method to show on the DoM
 const display = () => {
+  newList.innerHTML = '';
   if (localStorage.Tasks) {
     for (let i = 0; i < JSON.parse(localStorage.Tasks).length; i += 1) {
       // creating a div element to store form inputs

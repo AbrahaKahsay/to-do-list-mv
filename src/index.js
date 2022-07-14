@@ -24,7 +24,7 @@ addList.addEventListener('keypress', (event) => {
     newTasks.value = '';
     const stringData = JSON.stringify(collection.array);
     localStorage.setItem('Tasks', stringData);
-    window.location.reload();
+   display();
   }
 });
 
@@ -44,7 +44,7 @@ for (let i = 0; i < collection.array.length; i += 1) {
     const stringData = JSON.stringify(filtered);
     localStorage.setItem('Tasks', stringData);
     deleteItem.remove();
-    window.location.reload();
+    display();
   });
 }
 
@@ -66,7 +66,7 @@ const updateTask = () => {
       collection.array[i].description = list[i].value;
       const stringData = JSON.stringify(collection.array);
       localStorage.setItem('Tasks', stringData);
-      window.location.reload();
+      display();
     });
   }
 };
@@ -101,6 +101,7 @@ clear.addEventListener('click', () => {
       const markedItem = document.getElementById(`item${i}`);
       // console.log(markedItem);
       markedItem.remove();
+      display();
     }
   }
 
@@ -120,7 +121,7 @@ clear.addEventListener('click', () => {
 
   updateTask();
   updateIndex();
-  window.location.reload();
+  display();
 });
 
 // Add the refresh button
