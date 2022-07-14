@@ -2,9 +2,10 @@ import './style.css';
 import Refresh from './refresh.png';
 import Enter from './enter.png';
 import Todos from './modules/classes.js';
-import { Tasks, collection, addData, removeData, updateIndex, updateTask,
-  clearStorage, clearAllComplete, display, addList } from './modules/methods.js';
-
+import {
+  collection, addData, removeData, updateIndex, updateTask,
+  clearStorage, clearAllComplete, display, addList,
+} from './modules/methods.js';
 
 addData();
 

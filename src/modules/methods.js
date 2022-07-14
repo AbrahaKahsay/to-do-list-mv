@@ -1,4 +1,4 @@
-import Trash from '.././trash-bin.png';
+import Trash from '../trash-bin.png';
 // handles DoM elements
 const addList = document.getElementById('add-list');
 const newList = document.getElementById('new-list');
@@ -19,7 +19,7 @@ const addData = () => {
 };
 
 // remove item from collection
-const removeData = ()=> {
+const removeData = () => {
   for (let i = 0; i < collection.array.length; i += 1) {
     const remove = document.getElementById(`remove${i}`);
     const descriptionName = collection.array[i].description;
@@ -59,8 +59,8 @@ const updateTask = () => {
   }
 };
 
-const clearStorage = ()=>{
-    // Add functionality to checkbox
+const clearStorage = () => {
+  // Add functionality to checkbox
   for (let i = 0; i < collection.array.length; i += 1) {
     const checkbox = document.getElementById(`box${i}`);
     checkbox.addEventListener('change', () => {
@@ -79,7 +79,7 @@ const clearStorage = ()=>{
       }
     });
   }
-}
+};
 
 const clearAllComplete = () => {
   // Add functionality to clear button
@@ -103,7 +103,7 @@ const clearAllComplete = () => {
     updateIndex();
     window.location.reload();
   });
-}
+};
 
 // create display method to show on the DoM
 const display = () => {
@@ -154,5 +154,7 @@ const display = () => {
     }
   }
 };
-export { Tasks, collection, addData, removeData, updateIndex, updateTask,
-  clearStorage, clearAllComplete, display, addList };
+export {
+  Tasks, collection, addData, removeData, updateIndex, updateTask,
+  clearStorage, clearAllComplete, display, addList,
+};
