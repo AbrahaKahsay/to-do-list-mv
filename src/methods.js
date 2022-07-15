@@ -51,10 +51,6 @@ const display = () => {
       const lineBreak = document.createElement('br');
       todo.appendChild(lineBreak);
 
-      // // create and append line
-      // const line = document.createElement('hr');
-      // todo.appendChild(line);
-
       const editIcon = new Image();
       editIcon.className = 'iconEdit';
       editIcon.id = `edit${i}`;

@@ -133,7 +133,6 @@ refresh.className = 'refresh';
 refresher.appendChild(refresh);
 
 const reloadPage = document.querySelector('#refresh');
-// Reload everything:
 function reload() {
   window.location.reload();
 }
