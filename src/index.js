@@ -1,4 +1,4 @@
-// import _ from 'lodash';
+
 import './style.css';
 import Refresh from './refresh.png';
 import Enter from './enter.png';
