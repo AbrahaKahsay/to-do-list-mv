@@ -1,7 +1,4 @@
-import Dots from './dots.png';
 import Trash from './trash-bin.png';
-import Edit from './edit.png';
-
 // handles DoM elements
 const addList = document.getElementById('add-list');
 const newList = document.getElementById('new-list');
@@ -51,23 +48,11 @@ const display = () => {
       const lineBreak = document.createElement('br');
       todo.appendChild(lineBreak);
 
-      const editIcon = new Image();
-      editIcon.className = 'iconEdit';
-      editIcon.id = `edit${i}`;
-      editIcon.src = Edit;
-      div.appendChild(editIcon);
-
       const trashIcon = new Image();
       trashIcon.className = 'trashIcon';
       trashIcon.id = `remove${i}`;
       trashIcon.src = Trash;
       div.appendChild(trashIcon);
-
-      const dotsIcon = new Image();
-      dotsIcon.className = 'icon';
-      dotsIcon.id = `icon${i}`;
-      dotsIcon.src = Dots;
-      div.appendChild(dotsIcon);
 
       todo.appendChild(div);
       newList.appendChild(todo);
