@@ -60,7 +60,6 @@ const updateTask = () => {
 };
 
 const clearStorage = () => {
-  // Add functionality to checkbox
   for (let i = 0; i < collection.array.length; i += 1) {
     const checkbox = document.getElementById(`box${i}`);
     checkbox.addEventListener('change', () => {
